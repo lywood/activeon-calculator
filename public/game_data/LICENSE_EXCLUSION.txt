@@ -1,0 +1,13 @@
+LICENSE EXCLUSION & FAIR USE NOTICE
+==================================
+
+1. EXCLUSION FROM PROJECT LICENSE:
+The primary GNU Affero General Public License v3.0 (AGPL-3.0) applied to the root of this repository does NOT apply to any data tables, matrix arrays, text definitions, or raw game values contained within this specific directory (/public/game-data/). The authors of this repository claim no copyright, ownership, or copyleft enforcement over these specific structures.
+
+2. INTELLECTUAL PROPERTY & FAIR USE:
+The sequential arrays, balancing metrics, and scaling coefficients housed in this folder are compiled parameters extracted from the game client files of "Legends of Idleon", which is the exclusive intellectual property of the developer, LavaFlame2. 
+
+This data is reproduced here in flat, structural data formats strictly under the Fair Use doctrine (US Copyright Act § 107) and Fair Dealing exceptions (Australian Copyright Act 1968) for the sole purpose of non-commercial community analysis, education, and gameplay calculation optimization.
+
+3. DOWNSTREAM NOTE:
+Any downstream developers cloning, forking, or adapting this project are advised that utilizing or reproducing these raw game data tables for commercial gain or closed-source redistribution may infringe upon the original game creator's copyright.
