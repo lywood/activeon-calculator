@@ -1,0 +1,29 @@
+# =========================================================================
+# ActiveOn Calculator - .gitignore (AGPL-3.0 Workspace Bounds)
+# =========================================================================
+
+# --- IDEs & Text Editors ---
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+
+# --- Operating System Artifacts ---
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# --- Python Runtime (Local Web Server Caches) ---
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# --- Testing & Scratchpads ---
+# Allows you to drop raw game files or mock profiles into a local scratch folder 
+# without accidentally committing user save files to public source control.
+scratch/
+*.log
