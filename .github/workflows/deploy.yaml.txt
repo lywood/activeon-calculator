@@ -1,0 +1,46 @@
+name: Deploy Website to Pages
+
+on:
+  push:
+    branches:
+      - main # Change to 'master' if your default branch is named master
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      # This creates a temporary deployment staging folder on the server
+      - name: Merge Folders for Deployment
+        run: |
+          mkdir staging_dir
+          cp -r src/* staging_dir/
+          mkdir -id staging_dir/public
+          cp -r public/* staging_dir/public/ 2>/dev/null || true
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      # This tells GitHub to upload the merged directory
+      - name: Upload Artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: './staging_dir'
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
