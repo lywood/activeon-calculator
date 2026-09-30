@@ -29,7 +29,7 @@ jobs:
         run: |
           mkdir staging_dir
           cp -r src/* staging_dir/
-          mkdir -id staging_dir/public
+          mkdir -p staging_dir/public
           cp -r public/* staging_dir/public/ 2>/dev/null || true
 
       - name: Setup Pages
